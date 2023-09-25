@@ -3,7 +3,7 @@ export let users = [
         "id": 1,
         "name": "Leanne Graham",
         "username": "Bret",
-        "email": "Sincere@april.biz",
+        "email": "Sincere@april.biz1",
         "address": {
             "street": "Kulas Light",
             "suite": "Apt. 556",
