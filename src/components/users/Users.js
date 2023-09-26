@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import User from '../user/User';
 
 export default function Users() {
-    let [users,setUsers] = useState([]);      // функція яка викликає масив [get,set()]
-                                                        // get - обєкт, set() - функція;
+    let [users,setUsers] = useState([]);
 
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://rickandmortyapi.com/api/character')
         .then(value => value.json())
         .then(value => {
-            setUsers(value);
+                setUsers(value.results.splice(0,6));
         });
     return (
         <div>

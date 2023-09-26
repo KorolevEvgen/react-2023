@@ -5,7 +5,7 @@ function App() {
 
     return (
         <div>
-            <h2>app component</h2>
+            <h2>character</h2>
             <Users/>
         </div>
     );
