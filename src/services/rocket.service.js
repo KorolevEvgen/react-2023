@@ -6,4 +6,4 @@ const rocketService = {
     getAll: () => axiosService.get(urls.rockets),
 };
 
-export {rocketService};
+export {rocketService}
