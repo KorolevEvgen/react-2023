@@ -21,4 +21,4 @@ const Rockets = () => {
     );
 };
 
-export {Rockets}
+export {Rockets};
