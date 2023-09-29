@@ -1,13 +1,16 @@
 import './App.css';
+import {Users} from './components/users/Users';
 
-import {Rockets} from './components/rockets/Rockets';
+
 
 
 function App() {
 
     return (
         <div>
-            <Rockets/>
+            <h2>Users list</h2>
+            <Users/>
+
         </div>
     );
 }

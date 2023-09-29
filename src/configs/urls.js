@@ -1,10 +1,10 @@
-const baseURL = 'https://api.spacexdata.com/v3/launches';
+const baseURL = 'https://jsonplaceholder.typicode.com';
 
 const urls = {
-    rockets: '/',
+    users: '/users',
 };
 
 export {
     baseURL,
     urls
-};
+}
