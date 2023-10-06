@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect} from 'react';
 
 import {useForm} from 'react-hook-form';
 import {joiResolver} from '@hookform/resolvers/joi';
@@ -32,9 +32,9 @@ const CarForm = ({ setCars, carForUpdate, setCarForUpdate }) => {
         } else {
             const { data } = await carService.create(car);
             setCars(cars => [...cars, data]);
-            reset();
-        }
 
+        }
+        reset();
 
     };
 

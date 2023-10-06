@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 import css from './Car.module.css';
 import {carService} from '../../services';
 
-const Car = ({ car, setCars,setCarForUpdate }) => {
+const Car = ({ car, setCars, setCarForUpdate }) => {
     const { id, model, price, year } = car;
     const deleteCar = async () => {
         await carService.deleteById(id);
@@ -23,7 +23,7 @@ const Car = ({ car, setCars,setCarForUpdate }) => {
                 <div>price: {price}</div>
             </div>
             <div className={css.tools}>
-                <button onClick={()=>setCarForUpdate(car)}>Update</button>
+                <button onClick={() => setCarForUpdate(car)}>Update</button>
                 <button onClick={() => deleteCar()}>Delete</button>
             </div>
         </div>
