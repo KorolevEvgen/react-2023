@@ -1,5 +1,5 @@
 import './App.css';
-import {Cars} from './components';
+import {Cars} from './components'
 
 
 function App() {

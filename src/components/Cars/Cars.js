@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react'
 
 import {CarForm} from '../CarForm/CarForm';
 import {carService} from '../../services';
