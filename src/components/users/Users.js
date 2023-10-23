@@ -1,17 +1,27 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
+import {userService} from '../../services';
 import User from '../user/User';
+import UserForm from '../userForm/UserForm';
 
-export default function Users() {
-    let [users,setUsers] = useState([]);
 
-    fetch('https://rickandmortyapi.com/api/character')
-        .then(value => value.json())
-        .then(value => {
-                setUsers(value.results.splice(0,6));
-        });
+const Users = () => {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        userService.getAll().then(({ data }) => setUsers(data));
+    }, []);
+
     return (
         <div>
-            {users.map(user => (<User item={user} key={user.id}/>))}
+            <div><UserForm setUsers={setUsers}/></div>
+            <div>
+                {
+                    users.map(user => <User key={user.id} user={user}/>)
+                }
+            </div>
         </div>
     );
 };
+
+export default Users;
