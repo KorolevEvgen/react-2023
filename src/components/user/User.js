@@ -1,12 +1,13 @@
 import React from 'react';
 
-const User = ({ user, showUser }) => {
+const User = ({ user, getUserId }) => {
+
     return (
         <div>
-            <h3>{user.id} -- {user.name}</h3>
-            <button onClick={() => showUser(user)}>Get details</button>
+            <h3>{user.id} --- {user.name}</h3>
+            <button onClick={()=>getUserId(user.id)}>Click me</button>
         </div>
     );
 };
 
-export {User};
+export default User;
